@@ -1,8 +1,7 @@
 # Ben Bauman
-
 # Abas Farah
 # Abdullah Alhaidar
-
+# Abdullah Alhaidar
 [![CI](https://github.com/perkinsjr/t3-turbo-and-clerk/actions/workflows/ci.yml/badge.svg)](https://github.com/perkinsjr/t3-turbo-and-clerk/actions/workflows/ci.yml)
 
 # Tennis Self Serve
