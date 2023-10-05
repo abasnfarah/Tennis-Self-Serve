@@ -4,6 +4,9 @@
 
 From Create T3 Turbo with Clerk Authentication
 
+dylan brusehaver
+
+
 ## Clerk Dashboard Setup
 
 For this template to work you need to enable Discord as an OAuth provider. You can find the social options under `User & Authentication / Social Providers` in the [Clerk Dashboard](https://dashboard.clerk.dev)
