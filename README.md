@@ -1,6 +1,6 @@
-
 # Abdullah Alhaidar
 # Ben Bauman
+# Abas Farah
 [![CI](https://github.com/perkinsjr/t3-turbo-and-clerk/actions/workflows/ci.yml/badge.svg)](https://github.com/perkinsjr/t3-turbo-and-clerk/actions/workflows/ci.yml)
 
 # Tennis Self Serve
@@ -8,8 +8,8 @@
 From Create T3 Turbo with Clerk Authentication
 
 dylan brusehaver
-# chris nagy
 
+# Chris Nagy
 ## Clerk Dashboard Setup
 
 For this template to work you need to enable Discord as an OAuth provider. You can find the social options under `User & Authentication / Social Providers` in the [Clerk Dashboard](https://dashboard.clerk.dev)
