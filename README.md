@@ -8,7 +8,7 @@
 From Create T3 Turbo with Clerk Authentication
 
 dylan brusehaver
-
+# chris nagy
 
 ## Clerk Dashboard Setup
 
