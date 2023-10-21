@@ -5,10 +5,10 @@ To test locally do the following:
 
 ```
 
-### changes
+### Changes
 1. 
 
-#### Issue
+#### Issues
 closes #IssueNumber
 
 ## Checklist before requesting a review
