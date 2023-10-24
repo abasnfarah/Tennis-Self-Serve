@@ -12,7 +12,7 @@ import { trpc } from "../utils/trpc";
 const SignOut = () => {
   const { signOut } = useAuth();
   return (
-    <View className="rounded-lg border-2 border-gray-500 p-4">
+    <View className="rounded-lg border-2 border-[#78b788] p-4">
       <Button
         title="Sign Out"
         onPress={() => {
@@ -27,9 +27,9 @@ const PostCard: React.FC<{
   post: inferProcedureOutput<AppRouter["post"]["all"]>[number];
 }> = ({ post }) => {
   return (
-    <View className="rounded-lg border-2 border-gray-500 p-4">
-      <Text className="text-xl font-semibold text-[#cc66ff]">{post.title}</Text>
-      <Text className="text-white">{post.content}</Text>
+    <View className="rounded-lg border-2 border-[#78b788] p-4">
+      <Text className="text-xl font-semibold text-[#3cc07d]">{post.title}</Text>
+      <Text className="text-black">{post.content}</Text>
     </View>
   );
 };
@@ -48,17 +48,17 @@ const CreatePost: React.FC = () => {
   return (
     <View className="flex flex-col border-t-2 border-gray-500 p-4">
       <TextInput
-        className="mb-2 rounded border-2 border-gray-500 p-2 text-white"
+        className="mb-2 rounded border-2 border-[#78b788] p-2 text-black"
         onChangeText={onChangeTitle}
         placeholder="Title"
       />
       <TextInput
-        className="mb-2 rounded border-2 border-gray-500 p-2 text-white"
+        className="mb-2 rounded border-2 border-[#78b788] p-2 text-black"
         onChangeText={onChangeContent}
         placeholder="Content"
       />
       <TouchableOpacity
-        className="rounded bg-[#cc66ff] p-2"
+        className="rounded bg-[#3cc07d] p-2"
         onPress={() => {
           mutate({
             title,
@@ -77,12 +77,12 @@ export const HomeScreen = () => {
   const [showPost, setShowPost] = React.useState<string | null>(null);
 
   return (
-    <SafeAreaView className="bg-[#2e026d] bg-gradient-to-b from-[#2e026d] to-[#15162c]">
+    <SafeAreaView className="bg-[#f5eac8] bg-gradient-to-b from-[#2e026d] to-[#b4ad92]">
       <View className="h-full w-full p-4">
-        <Text className="mx-auto pb-2 text-5xl font-bold text-white">
-          Create <Text className="text-[#cc66ff]">T3</Text> Turbo
+        <Text className="mx-auto pb-2 text-5xl font-bold text-[#00ca73]">
+          Raeda
         </Text>
-
+        <Text className="mx-auto pb-2 text-2xl font-bold text-[#b4ad92]">Ultimate Tennis Coach</Text> 
         <View className="py-2">
           {showPost ? (
             <Text className="text-white">
@@ -90,7 +90,7 @@ export const HomeScreen = () => {
               {showPost}
             </Text>
           ) : (
-            <Text className="font-semibold italic text-white">
+            <Text className="font-semibold italic text-black">
               Press on a post
             </Text>
           )}
