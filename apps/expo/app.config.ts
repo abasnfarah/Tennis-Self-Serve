@@ -1,6 +1,6 @@
 import { ExpoConfig, ConfigContext } from "@expo/config";
 
-const CLERK_PUBLISHABLE_KEY = "your-clerk-publishable-key";
+const CLERK_PUBLISHABLE_KEY = "";
 
 const defineConfig = (_ctx: ConfigContext): ExpoConfig => ({
   name: "expo",
@@ -12,7 +12,7 @@ const defineConfig = (_ctx: ConfigContext): ExpoConfig => ({
   splash: {
     image: "./assets/icon.png",
     resizeMode: "contain",
-    backgroundColor: "#2e026d",
+    backgroundColor: "#f5eac8",
   },
   updates: {
     fallbackToCacheTimeout: 0,
@@ -25,7 +25,7 @@ const defineConfig = (_ctx: ConfigContext): ExpoConfig => ({
   android: {
     adaptiveIcon: {
       foregroundImage: "./assets/icon.png",
-      backgroundColor: "#2e026d",
+      backgroundColor: "#f5eac8",
     },
   },
   extra: {
@@ -34,7 +34,15 @@ const defineConfig = (_ctx: ConfigContext): ExpoConfig => ({
     },
     CLERK_PUBLISHABLE_KEY,
   },
-  plugins: ["./expo-plugins/with-modify-gradle.js"],
+  plugins: [
+    "./expo-plugins/with-modify-gradle.js",
+    [
+      "expo-camera",
+      {
+        "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera."
+      }
+    ],
+  ],
 });
 
 export default defineConfig;
