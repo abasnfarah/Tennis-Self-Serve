@@ -1,5 +1,7 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, send_file
 import tempfile
+import subprocess
+import os
 
 app = Flask(__name__)
 
@@ -11,20 +13,20 @@ def index():
 def data():
     data_received = request.json
     print(data_received)
-    return {"message": "Data received!"}
-
-@app.route('/video', methods=['POST'])
-def video():
     video_file = request.files['video']
-    temp_video = tempfile.NamedTemporaryFile(suffix='.mp4', delete=False)
-    video_file.save(temp_video.name)
+    if video_file:
+        input_path = data_received['uri']
+        output_path = 'output_video.mp4'
 
-    # OpenCv stuff here with the video
-    # temp video should be the output video with acompanying text or just pose info.
+        video_file.save(input_path)
 
-    print("Sending Video...")
-    return send_file(temp_output_video.name, as_attachment=True, attachment_filename='processed_video.mp4')
+        # convert mov to mp4
+        subprocess.run(['ffmpeg', '-i', input_path, '-vcodec', 'copy', '-acodec', 'copy', output_path])
 
+        #OpenCv stuff here with the video
+        return send_file(output_path, as_attachment=True)
+
+    return 'No video file provided', 400
 
 if __name__ == "__main__":
     app.run(debug=True)
