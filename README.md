@@ -1,15 +1,23 @@
-# Ben Bauman
+
 
 [![CI](https://github.com/perkinsjr/t3-turbo-and-clerk/actions/workflows/ci.yml/badge.svg)](https://github.com/perkinsjr/t3-turbo-and-clerk/actions/workflows/ci.yml)
 
 # Tennis Self Serve
+#### TEAM:
+* Abdullah Alhaidar
+* Ben Bauman
+* Abas Farah
+* Chris Nagy
+* Dylan Brusehaver
 
-From Create T3 Turbo with Clerk Authentication
+Built From Create T3 Turbo with Clerk Authentication
 
-dylan brusehaver
+<img src="./apps/expo/assets/homeScreen.png" alt="Home Screen" style="height: 700px;"/>
+<img src="./apps/expo/assets/logoScreen.png" alt="Logo" style="height: 700px;"/>
 
+## Install
 
-## Clerk Dashboard Setup
+### Clerk Dashboard Setup
 
 For this template to work you need to enable Discord as an OAuth provider. You can find the social options under `User & Authentication / Social Providers` in the [Clerk Dashboard](https://dashboard.clerk.dev)
 
@@ -17,7 +25,7 @@ For this template to work you need to enable Discord as an OAuth provider. You c
 
 It uses [Turborepo](https://turborepo.org/) and contains:
 
-## Code Layout
+### Code Layout
 
 ```
 .github
@@ -38,11 +46,11 @@ packages
      └─ typesafe db-calls using Prisma
 ```
 
-## Quick Start
+### Quick Start
 
 To get it running, follow the steps below:
 
-### Setup dependencies
+#### Setup dependencies
 
 ```diff
 # Install dependencies
@@ -57,7 +65,7 @@ cp .env.example .env
 pnpm db-push
 ```
 
-### Configure Expo app
+#### Configure Expo app
 
 Expo doesn't use the .env for the publishable key, so you will need to go to `apps/expo/app.config.ts` and add it there.
 
@@ -66,7 +74,7 @@ const CLERK_PUBLISHABLE_KEY = "your-clerk-publishable-key";
 
 ```
 
-### Configure Expo `dev`-script
+#### Configure Expo `dev`-script
 
 > **Note:** If you want to use a physical phone with Expo Go, just run `pnpm dev` and scan the QR-code.
 
@@ -92,17 +100,17 @@ const CLERK_PUBLISHABLE_KEY = "your-clerk-publishable-key";
 
 3. Run `pnpm dev` at the project root folder.
 
-## Deployment
+### Deployment
 
-### Next.js
+#### Next.js
 
 > Note if you are building locallly you will need to insert your env correctly, for example using `pnpm with-env next build`
 
-#### Prerequisites
+##### Prerequisites
 
 _We do not recommend deploying a SQLite database on serverless environments since the data wouldn't be persisted. I provisioned a quick Postgresql database on [Railway](https://railway.app), but you can of course use any other database provider. Make sure the prisma schema is updated to use the correct database._
 
-#### Deploy to Vercel
+##### Deploy to Vercel
 
 Let's deploy the Next.js application to [Vercel](https://vercel.com/). If you have ever deployed a Turborepo app there, the steps are quite straightforward. You can also read the [official Turborepo guide](https://vercel.com/docs/concepts/monorepos/turborepo) on deploying to Vercel.
 
@@ -116,7 +124,7 @@ Let's deploy the Next.js application to [Vercel](https://vercel.com/). If you ha
 
 3. Done! Your app should successfully deploy. Assign your domain and use that instead of `localhost` for the `url` in the Expo app so that your Expo app can communicate with your backend when you are not in development.
 
-### Expo
+#### Expo
 
 Deploying your Expo application works slightly differently compared to Next.js on the web. Instead of "deploying" your app online, you need to submit production builds of your app to the app stores, like [Apple App Store](https://www.apple.com/app-store/) and [Google Play](https://play.google.com/store/apps). You can read the full [Distributing your app](https://docs.expo.dev/distribution/introduction/), including best practices, in the Expo docs.
 
@@ -207,6 +215,6 @@ Deploying your Expo application works slightly differently compared to Next.js o
 
 8. Done! Now that you have created your production build, submitted it to the stores, and installed EAS Update, you are ready for anything!
 
-## References
+### References
 
 The stack originates from [create-t3-turbo](https://github.com/t3-oss/create-t3-turbo).

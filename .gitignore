@@ -9,16 +9,16 @@ node_modules
 coverage
 
 # database
-prisma/db.sqlite
-prisma/db.sqlite-journal
+db.sqlite
+db.sqlite-journal
 
 # next.js
-.next/
-out/
+.next
+out
 
 # expo
-.expo/
-dist/
+.expo
+dist
 
 # production
 build
@@ -45,3 +45,7 @@ yarn-error.log*
 
 # turbo
 .turbo
+
+#flask
+*__pycache__*
+*.pyc

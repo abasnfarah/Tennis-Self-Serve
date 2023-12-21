@@ -1,0 +1,10 @@
+{
+    "name": "@acme/flask",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "start": "flask run --host=127.0.0.1 --port=3001",
+        "server": "flask run --host=127.0.0.1 --port=3001",
+        "dev": "flask run --host=127.0.0.1 --port=3001"
+    }
+}
