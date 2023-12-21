@@ -26,6 +26,7 @@
         "daisyui": "^3.9.2",
         "expo": "^48.0.6",
         "expo-auth-session": "^4.0.3",
+        "expo-av": "^13.6.0",
         "expo-camera": "^13.6.0",
         "expo-random": "^13.0.0",
         "expo-secure-store": "^12.1.1",

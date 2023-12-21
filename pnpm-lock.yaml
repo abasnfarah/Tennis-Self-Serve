@@ -82,6 +82,9 @@ importers:
       expo-auth-session:
         specifier: ^4.0.3
         version: 4.0.3(expo@48.0.10)
+      expo-av:
+        specifier: ^13.6.0
+        version: 13.6.0(expo@48.0.10)
       expo-camera:
         specifier: ^13.6.0
         version: 13.6.0(expo@48.0.10)
@@ -5358,6 +5361,14 @@ packages:
     transitivePeerDependencies:
       - expo
       - supports-color
+    dev: false
+
+  /expo-av@13.6.0(expo@48.0.10):
+    resolution: {integrity: sha512-42dDX53uao+IxuecNRcAvLuO7CiF9lriCufDfw2sSIGKRYox6m2RXYFstVpDSv2gzsuScGk7fwT23EUrUXbk8A==}
+    peerDependencies:
+      expo: '*'
+    dependencies:
+      expo: 48.0.10(@babel/core@7.20.5)
     dev: false
 
   /expo-camera@13.6.0(expo@48.0.10):
